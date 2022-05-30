@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/homeFragment">
+
+    <action
+        android:id="@+id/action_global_startRunFragment"
+        app:destination="@id/startRunFragment"
+        app:launchSingleTop="true"/>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.mysportickappdev43.Main.fragments.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_currentExercise"
+            app:destination="@id/currentExercise" />
+        <action
+            android:id="@+id/action_homeFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_fragmentCreateExec"
+            app:destination="@id/fragmentCreateExec" />
+        <action
+            android:id="@+id/action_homeFragment_to_startRunFragment"
+            app:destination="@id/startRunFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentCreateExec"
+        android:name="com.example.mysportickappdev43.Main.fragments.createExec.FragmentCreateExec"
+        android:label="Create exercise"
+        tools:layout="@layout/fragment_create_exec" >
+        <action
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_fragmentCreateExec_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/currentExercise"
+        android:name="com.example.mysportickappdev43.Main.fragments.currentExec.CurrentExercise"
+        android:label="fragment_current_exercise"
+        tools:layout="@layout/fragment_current_exercise" >
+        <action
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_currentExercise_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.mysportickappdev43.Main.fragments.settings.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_settingsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/startRunFragment"
+        android:name="com.example.mysportickappdev43.Main.fragments.startRun.StartRunFragment"
+        android:label="fragment_start_run"
+        tools:layout="@layout/fragment_start_run" >
+        <action
+            android:id="@+id/action_startRunFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>

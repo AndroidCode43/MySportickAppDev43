@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    tools:context=".Main.fragments.currentExec.CurrentExercise">
+
+    <ImageView
+        android:id="@+id/btn_exit_exercise"
+        style="@style/def_btn_exit_style"
+        android:src="@drawable/ic_baseline_close_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/green_neon_color" />
+
+    <ImageView
+        android:id="@+id/btn_show_options_menu"
+        android:layout_marginEnd="@dimen/def_margin"
+        style="@style/def_btn_exit_style"
+        android:src="@drawable/ic_baseline_more_vert_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tx_name_exec"
+        style="@style/main_header_text_for_fragment"
+        android:text="Name Exercise"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_exit_exercise"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_exit_exercise" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/circularProgressIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:indicatorColor="@color/green_neon_color"
+        android:indeterminate="false"
+        app:indicatorSize="70dp"
+        android:progress="0"
+        app:trackColor="@color/color_main_gray"
+        android:layout_margin="@dimen/medium_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tx_name_exec" />
+
+    <TextView
+        android:id="@+id/tx_date"
+        style="@style/style_create_exec_main"
+        android:fontFamily="@font/roboto_light"
+        android:text="27.08.21"
+        android:textColor="@color/green_neon_color"
+        app:layout_constraintEnd_toEndOf="@+id/btn_update_current_data"
+        app:layout_constraintTop_toTopOf="@+id/circularProgressIndicator" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_update_current_data"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Dialog.Flush"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/def_margin"
+        android:text="@string/update_the_data"
+        android:textColor="@color/green_neon_color"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/circularProgressIndicator"
+        app:layout_constraintEnd_toStartOf="@+id/circularProgressIndicator"
+        app:layout_constraintTop_toBottomOf="@+id/circularProgressIndicator" />
+
+
+    <TextView
+        android:layout_marginTop="@dimen/small_margin"
+        android:id="@+id/textView7"
+        style="@style/style_create_exec_main"
+        android:layout_marginStart="@dimen/def_margin"
+        android:text="@string/today_statistics"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_update_current_data" />
+
+    <com.jmedeisis.draglinearlayout.DragLinearLayout
+        android:id="@+id/drag_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/def_margin"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginEnd="@dimen/def_margin"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/small_text"
+                    android:layout_gravity="start|center_vertical"
+                    android:text="@string/number_of_repetions" />
+
+                <TextView
+                    android:id="@+id/tx_count_repetitions"
+                    style="@style/style_create_exec_main"
+                    android:layout_gravity="end"
+                    android:text="0"
+                    android:textColor="@color/green_neon_color" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/small_text"
+                    android:layout_gravity="start|center_vertical"
+                    android:text="@string/number_of_approaches_completed" />
+
+                <TextView
+                    android:id="@+id/tx_count_approaches"
+                    style="@style/style_create_exec_main"
+                    android:layout_gravity="end"
+                    android:text="0"
+                    android:textColor="@color/green_neon_color" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/small_text"
+                    android:layout_gravity="start|center_vertical"
+                    android:text="@string/it_remains_to_execute" />
+
+                <TextView
+                    android:id="@+id/tx_left_to_complete"
+                    style="@style/style_create_exec_main"
+                    android:layout_gravity="end"
+                    android:text="0"
+                    android:textColor="@color/green_neon_color" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/small_text"
+                    android:layout_gravity="start|center_vertical"
+                    android:text="@string/cal_burned"
+                    android:textColor="@color/white_red" />
+
+                <TextView
+                    android:id="@+id/tx_ccal_burned"
+                    style="@style/style_create_exec_main"
+                    android:layout_gravity="end"
+                    android:text="0"
+                    android:textColor="@color/white_red" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_made_approach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/i_made_an_approach"
+            app:chipBackgroundColor="@color/green_neon_color"
+            app:chipIcon="@drawable/ic_check" />
+
+        <View
+            style="@style/style_divider"
+            android:layout_marginTop="@dimen/def_margin" />
+
+        <TextView
+            android:layout_marginTop="@dimen/small_margin"
+            style="@style/style_create_exec_main"
+            android:text="@string/daily_task"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_update_current_data" />
+
+        <FrameLayout
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/small_text"
+                android:layout_gravity="start|center_vertical"
+                android:text="@string/how_many_reps_to_complete" />
+
+            <TextView
+                android:id="@+id/tx_count_repetitions_task"
+                style="@style/style_create_exec_main"
+                android:layout_gravity="end"
+                android:text="0"
+                android:textColor="@color/green_neon_color" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/small_text"
+                android:layout_gravity="start|center_vertical"
+                android:text="@string/how_many_app_to_complete" />
+
+            <TextView
+                android:id="@+id/tx_count_approaches_task"
+                style="@style/style_create_exec_main"
+                android:layout_gravity="end"
+                android:text="0"
+                android:textColor="@color/green_neon_color" />
+
+        </FrameLayout>
+
+        <View
+            style="@style/style_divider"
+            android:layout_marginTop="@dimen/def_margin" />
+
+        <FrameLayout
+            android:layout_marginTop="@dimen/def_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/style_create_exec_main"
+                android:text="Viewing dates" />
+
+            <TextView
+                android:id="@+id/tx_count_all_day"
+                android:textColor="@color/green_neon_color"
+                android:text="0"
+                android:layout_gravity="end"
+                style="@style/style_create_exec_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </FrameLayout>
+
+        <com.robinhood.spark.SparkView
+            android:layout_marginTop="@dimen/small_margin"
+            android:id="@+id/date_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:spark_lineColor="@color/green_neon_color" />
+
+    </com.jmedeisis.draglinearlayout.DragLinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="test_blue">#0027FF</color>
+    <color name="green_neon_color">#1CA302</color>
+    <color name="gray_white">#738AA3</color>
+    <color name="white_blue">#0be7fb</color>
+    <color name="color_main_gray">#202020</color>
+    <color name="color_gray">#2B2B2B</color>
+
+    <array name="colors">
+        <item>#F44336</item>
+        <item>#E91E63</item>
+        <item>#3F51B5</item>
+        <item>#1E88E5</item>
+        <item>#546E7A</item>
+        <item>#43A047</item>
+    </array>
+
+    //customize
+    <color name="mtrl_textinput_default_box_stroke_color">@color/color_gray</color>
+    <color name="white_red">#d13d61</color>
+    <color name="color_gray_for_settings">#434343</color>
+
+</resources>

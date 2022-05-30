@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/itemCreate"
+        android:layout_marginTop="@dimen/def_margin"
+        android:layout_marginStart="@dimen/def_margin"
+        android:layout_marginEnd="@dimen/def_margin"
+        android:layout_width="55dp"
+        app:cardElevation="@dimen/def_elevation"
+        app:cardCornerRadius="17dp"
+        android:layout_gravity="center"
+        app:cardBackgroundColor="@color/green_neon_color"
+        android:layout_height="55dp">
+
+        <ImageView
+            android:id="@+id/itemExecIcon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/super_small_margin"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/itemExecName"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_gravity="center"
+        android:textSize="14sp"
+        android:text="name exec"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/gray_white"/>
+
+</LinearLayout>

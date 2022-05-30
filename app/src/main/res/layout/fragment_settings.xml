@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    android:layout_height="match_parent"
+    tools:context=".Main.fragments.settings.SettingsFragment">
+
+    <ImageView
+        android:id="@+id/btn_exit_sett"
+        style="@style/def_btn_exit_style"
+        android:src="@drawable/ic_baseline_close_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        style="@style/main_header_text_for_fragment"
+        android:text="@string/settings"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_exit_sett"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_exit_sett" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:src="@drawable/ic_launcher_foreground"
+        app:civ_border_color="@color/green_neon_color"
+        app:civ_border_width="3.5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:tint="@color/white" />
+
+    <TextView
+
+        android:id="@+id/user_nick"
+        style="@style/style_create_exec_main"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/def_margin"
+        android:text="User Nick"
+        android:textColor="@color/color_gray_for_settings"
+        app:layout_constraintEnd_toEndOf="@+id/circleImageView"
+        app:layout_constraintStart_toStartOf="@+id/circleImageView"
+        app:layout_constraintTop_toBottomOf="@+id/circleImageView" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/def_margin"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/def_margin"
+        android:layout_marginTop="@dimen/small_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_nick">
+
+        <TextView
+            style="@style/small_text"
+            android:layout_marginTop="@dimen/def_margin"
+            android:text="@string/field_change_nick" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/user_nick"
+            android:textColorHint="@color/white"
+            app:boxBackgroundColor="@color/color_main_gray"
+            app:boxBackgroundMode="filled"
+            app:boxCornerRadiusTopEnd="@dimen/corner_in_input_layout"
+            app:boxCornerRadiusTopStart="@dimen/corner_in_input_layout"
+            app:boxStrokeColor="@color/green_neon_color"
+            app:boxStrokeWidthFocused="2dp"
+            app:hintTextColor="@color/white">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_marginTop="@dimen/small_margin"
+                android:id="@+id/inp_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:gravity="center"
+                android:textColor="@color/white" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+<!--        сделать выбор даты через выбор даты-->
+
+        <TextView
+            style="@style/small_text"
+            android:layout_marginTop="@dimen/def_margin"
+            android:text="@string/field_change_height" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/height"
+            android:textColorHint="@color/white"
+            app:boxBackgroundColor="@color/color_main_gray"
+            app:boxBackgroundMode="filled"
+            app:boxCornerRadiusTopEnd="@dimen/corner_in_input_layout"
+            app:boxCornerRadiusTopStart="@dimen/corner_in_input_layout"
+            app:boxStrokeColor="@color/green_neon_color"
+            app:boxStrokeWidthFocused="2dp"
+            app:hintTextColor="@color/white">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inp_user_height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_margin"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textColor="@color/white" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            style="@style/small_text"
+            android:layout_marginTop="@dimen/def_margin"
+            android:text="@string/field_change_weight" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/weight"
+            android:textColorHint="@color/white"
+            app:boxBackgroundColor="@color/color_main_gray"
+            app:boxBackgroundMode="filled"
+            app:boxCornerRadiusTopEnd="@dimen/corner_in_input_layout"
+            app:boxCornerRadiusTopStart="@dimen/corner_in_input_layout"
+            app:boxStrokeColor="@color/green_neon_color"
+            app:boxStrokeWidthFocused="2dp"
+            app:hintTextColor="@color/white">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_marginTop="@dimen/small_margin"
+                android:id="@+id/inp_user_weight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:gravity="center"
+                android:textColor="@color/white" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            style="@style/small_text"
+            android:layout_marginTop="@dimen/def_margin"
+            android:text="@string/field_change_birthday" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/birthday"
+            android:textColorHint="@color/white"
+            app:boxBackgroundColor="@color/color_main_gray"
+            app:boxBackgroundMode="filled"
+
+            app:boxCornerRadiusTopEnd="@dimen/corner_in_input_layout"
+            app:boxCornerRadiusTopStart="@dimen/corner_in_input_layout"
+            app:boxStrokeColor="@color/green_neon_color"
+            app:boxStrokeWidthFocused="2dp"
+            app:hintTextColor="@color/white">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_marginTop="@dimen/small_margin"
+                android:id="@+id/inp_user_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:inputType="date"
+                android:gravity="center"
+                android:textColor="@color/white" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_save_user_data"
+        style="@style/btn_save_style"
+        android:layout_margin="@dimen/def_margin"
+        android:text="@string/save_profile"
+        app:backgroundTint="@color/color_main_gray"
+        app:cornerRadius="@dimen/corner_in_input_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

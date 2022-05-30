@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Main.fragments.startRun.StartRunFragment">
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/map_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/test_start_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="start location"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/test_last_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="last location"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/test_start_location"
+        app:layout_constraintStart_toStartOf="@+id/test_start_location"
+        app:layout_constraintTop_toBottomOf="@+id/test_start_location" />
+
+    <ImageView
+        android:id="@+id/btn_exit_run"
+        style="@style/def_btn_exit_style"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/ic_baseline_close_24"
+        app:tint="@color/green_neon_color"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView2"
+        style="@style/style_run_card_view"
+        android:layout_marginStart="@dimen/def_margin"
+        android:layout_marginEnd="@dimen/def_margin"
+        app:layout_constraintVertical_bias=".87"
+        app:cardCornerRadius="@dimen/def_corner_radius"
+        app:layout_constraintBottom_toTopOf="@+id/btnStartRun"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/map_view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/def_margin">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="@dimen/small_margin"
+                android:src="@drawable/ic__icon_run"
+                app:tint="@color/white" />
+
+            <TextView
+                style="@style/def_text_for_run_fg"
+                android:text="By foot" />
+
+            <TextView
+                android:id="@+id/tv_timer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/small_margin"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="end"
+                android:text="00:00:00"
+                android:textColor="@color/white"
+                android:textSize="@dimen/medium_text" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/style_run_card_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-20dp"
+        android:backgroundTint="#272727"
+        app:cardCornerRadius="@dimen/def_corner_radius"
+        app:cardElevation="@dimen/def_elevation"
+        app:layout_constraintEnd_toEndOf="@+id/materialCardView2"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView2">
+
+        <LinearLayout
+            android:layout_margin="@dimen/small_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/def_text_for_run_fg"
+                android:text="Distance: " />
+
+            <TextView
+                android:id="@+id/start_run_distance_m"
+                style="@style/def_text_for_run_fg"
+                android:text="0 m" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnStartRun"
+        android:layout_marginBottom="@dimen/medium_margin"
+        android:layout_margin="@dimen/def_margin"
+        android:text="@string/string_start_run"
+        app:backgroundTint="@color/color_main_gray"
+        app:cornerRadius="@dimen/corner_in_input_layout"
+        style="@style/btn_save_style"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

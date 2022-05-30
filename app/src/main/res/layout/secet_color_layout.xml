@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/color_main_gray"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/btn_close"
+            app:tint="@color/green_neon_color"
+            android:src="@drawable/ic_baseline_close_24"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="@dimen/def_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/medium_text"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/def_margin"
+            android:text="Color selection"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_close"
+            app:layout_constraintStart_toEndOf="@+id/btn_close"
+            app:layout_constraintTop_toTopOf="@+id/btn_close" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View style="@style/style_divider" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/color_recycler_view"
+        android:layout_width="match_parent"
+        app:spanCount="5"
+        android:paddingStart="@dimen/def_margin"
+        android:paddingEnd="@dimen/def_margin"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        tools:listitem="@layout/item_pick"
+        android:layout_marginBottom="@dimen/super_large_margin"
+        android:layout_marginTop="@dimen/def_margin"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

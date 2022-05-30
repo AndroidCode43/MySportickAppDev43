@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="def_size_btn_exit">40dp</dimen>
+    <dimen name="def_margin">15dp</dimen>
+    <dimen name="small_margin">10dp</dimen>
+    <dimen name="super_small_margin">5dp</dimen>
+    <dimen name="super_large_margin">40dp</dimen>
+    <dimen name="medium_margin">25dp</dimen>
+    <dimen name="large_text">25sp</dimen>
+    <dimen name="def_corner_radius">20dp</dimen>
+    <dimen name="size_icon_home">25dp</dimen>
+    <dimen name="medium_text">18sp</dimen>
+    <dimen name="def_elevation">10dp</dimen>
+    <dimen name="size_icon_drawer">30dp</dimen>
+    <dimen name="corner_in_input_layout">10dp</dimen>
+</resources>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="style_btn_def">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/small_margin</item>
+        <item name="android:paddingBottom">@dimen/small_margin</item>
+        <item name="android:layout_margin">@dimen/def_margin</item>
+    </style>
+
+    <style name="def_btn_close">
+        <item name="android:layout_width">@dimen/def_size_btn_exit</item>
+        <item name="android:layout_height">@dimen/def_size_btn_exit</item>
+        <item name="android:layout_margin">@dimen/def_margin</item>
+        <item name="android:background">@drawable/ic_baseline_close_24</item>
+    </style>
+
+    <style name="style_text_head">
+        <item name="android:layout_marginTop">@dimen/super_large_margin</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/def_margin</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <style name="text_style_basic">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/small_margin</item>
+        <item name="android:fontFamily">@font/roboto_light</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="text_style_emp">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/super_small_margin</item>
+        <item name="android:textColor">@color/test_blue</item>
+    </style>
+
+    <style name="small_text">
+        <item name="fontFamily">@font/roboto_light</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="style_text_head_home">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">#252525</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:layout_marginStart">@dimen/medium_margin</item>
+        <item name="android:layout_marginTop">@dimen/medium_margin</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="style_create_exec_main">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="style_divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/color_gray</item>
+    </style>
+
+    
+    
+    ///////////////CUSTOM////////////////////
+    <style
+        name="TextInputNeonStyle"
+        parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="android:layout_marginTop">@dimen/small_margin</item>
+        <item name="boxStrokeColor">@color/green_neon_color</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:cursorVisible">false</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/corner_in_input_layout</item>
+        <item name="boxCornerRadiusTopStart">@dimen/corner_in_input_layout</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/corner_in_input_layout</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/corner_in_input_layout</item>
+
+    </style>
+
+    <style name="def_btn_exit_style">
+        <item name="android:tint">@color/green_neon_color</item>
+        <item name="android:layout_width">@dimen/def_size_btn_exit</item>
+        <item name="android:layout_height">@dimen/def_size_btn_exit</item>
+        <item name="android:layout_marginStart">@dimen/def_margin</item>
+        <item name="android:layout_marginTop">@dimen/medium_margin</item>
+    </style>
+
+    <style name="main_header_text_for_fragment">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/medium_text</item>
+    </style>
+
+    <style name="btn_save_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/small_margin</item>
+        <item name="android:paddingBottom">@dimen/small_margin</item>
+        <item name="android:textColor">@color/green_neon_color</item>
+    </style>
+
+    <style name="style_run_card_view">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint">@color/color_main_gray</item>
+    </style>
+
+    <style name="def_text_for_run_fg">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="none_cursor">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:cursorVisible">false</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth"
+    app:startDestination="@id/createAccountFragment">
+
+    <fragment
+        android:id="@+id/createAccountFragment"
+        android:name="com.example.mysportickappdev43.Auth.fragments.CreateAccount.CreateAccountFragment"
+        android:label="fragment_create_account"
+        tools:layout="@layout/fragment_create_account" >
+        <action
+            android:id="@+id/action_createAccountFragment_to_signInFragment"
+            app:destination="@id/signInFragment"
+            app:enterAnim="@anim/slide_in_right" />
+<!--        <action-->
+<!--            android:id="@+id/action_createAccountFragment_to_createAccountBottomSheet"-->
+<!--            app:destination="@id/createAccountBottomSheet" />-->
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.mysportickappdev43.Auth.fragments.SignIn.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_signInFragment_to_createAccountFragment"
+            app:destination="@id/createAccountFragment"
+            app:enterAnim="@anim/slide_in_left" />
+    </fragment>
+<!--    <dialog-->
+<!--        android:id="@+id/createAccountBottomSheet"-->
+<!--        android:name="com.example.mysportickappdev43.Auth.fragments.CreateAccount.b"-->
+<!--        android:label="CreateAccountBottomSheet" />-->
+</navigation>
